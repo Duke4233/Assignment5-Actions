@@ -70,5 +70,6 @@ class TestCase(unittest.TestCase):
         self.assertEqual(expecteda, returned1)
         self.assertEqual(expectedb, returned2)
 
+
 if __name__ == '__main__':
     unittest.main()
