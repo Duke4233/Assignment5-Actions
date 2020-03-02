@@ -35,6 +35,40 @@ class TestCase(unittest.TestCase):
         expected = 10000**2 * math.pi
         self.assertEqual(expected, task.circlearea(R5))
 
+    def test_firstlast(self):
+        list1 = []
+        list2 = [1, 2, 5, 7]
+        list3 = ["help", "get", "me"]
+        list4 = ['', '%', '$']
+        list5 = [1, 2, 3, 4, 5, 6, 55 ,7 ,8 ,9, -55]
+
+        # test1
+        expecteda = "The list is empty"
+        self.assertEqual(expecteda, task.firstlast(list1))
+        # test2
+        expecteda = 1
+        expectedb = 7
+        returned1, returned2 = task.firstlast(list2)
+        self.assertEqual(expecteda,  returned1)
+        self.assertEqual(expectedb, returned2)
+        # test3
+        expecteda = "help"
+        expectedb = "me"
+        returned1, returned2 = task.firstlast(list3)
+        self.assertEqual(expecteda, returned1)
+        self.assertEqual(expectedb, returned2)
+        # test4
+        expecteda = ''
+        expectedb = '$'
+        returned1, returned2 = task.firstlast(list4)
+        self.assertEqual(expecteda, returned1)
+        self.assertEqual(expectedb, returned2)
+        # test5
+        expecteda = 1
+        expectedb = -55
+        returned1, returned2 = task.firstlast(list5)
+        self.assertEqual(expecteda, returned1)
+        self.assertEqual(expectedb, returned2)
 
 if __name__ == '__main__':
     unittest.main()
