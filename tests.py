@@ -13,7 +13,6 @@ class TestCase(unittest.TestCase):
     #    expected = "failure"
      #   self.assertEqual(expected, task.firstrun())
 
-
     def test__circlearea(self):
         R1 = 0
         R2 = 2
@@ -22,7 +21,7 @@ class TestCase(unittest.TestCase):
         R5 = 10000
         # test1
         expected = 0
-        self.assertEqual(expected,task.circlearea(R1))
+        self.assertEqual(expected, task.circlearea(R1))
         # test2
         expected = 4 * math.pi
         self.assertEqual(expected, task.circlearea(R2))
@@ -35,7 +34,7 @@ class TestCase(unittest.TestCase):
         # test5
         expected = 10000**2 * math.pi
         self.assertEqual(expected, task.circlearea(R5))
-        
+
 
 if __name__ == '__main__':
     unittest.main()
