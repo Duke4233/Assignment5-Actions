@@ -40,7 +40,7 @@ class TestCase(unittest.TestCase):
         list2 = [1, 2, 5, 7]
         list3 = ["help", "get", "me"]
         list4 = ['', '%', '$']
-        list5 = [1, 2, 3, 4, 5, 6, 55 ,7 ,8 ,9, -55]
+        list5 = [1, 2, 3, 4, 5, 6, 55, 7, 8, 9, -55]
 
         # test1
         expecteda = "The list is empty"
