@@ -1,5 +1,5 @@
 import math
-
+import datetime
 
 def firstrun():
     return "success"
@@ -18,3 +18,9 @@ def firstlast(thislist=[], *args):
     first = thislist[0]
     last = thislist[-1]
     return first, last
+
+
+def datediff(date1, date2):
+    days = date1 - date2
+    days = days.days
+    return abs(days)

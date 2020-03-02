@@ -1,7 +1,7 @@
 import unittest
 import task
 import math
-
+import datetime
 
 class TestCase(unittest.TestCase):
 
@@ -12,6 +12,7 @@ class TestCase(unittest.TestCase):
     # def test2(self):
     #    expected = "failure"
     #   self.assertEqual(expected, task.firstrun())
+
 
     def test__circlearea(self):
         R1 = 0
@@ -34,6 +35,7 @@ class TestCase(unittest.TestCase):
         # test5
         expected = 10000**2 * math.pi
         self.assertEqual(expected, task.circlearea(R5))
+
 
     def test_firstlast(self):
         list1 = []
@@ -70,6 +72,23 @@ class TestCase(unittest.TestCase):
         self.assertEqual(expecteda, returned1)
         self.assertEqual(expectedb, returned2)
 
+
+    def test_datediff(self):
+        # test 1
+        date1 = datetime.date(2020, 5, 30)
+        date2 = datetime.date(1990, 5, 30)
+        expected = 10958
+        self.assertEqual(expected, task.datediff(date1, date2))
+        # test2
+        date3 = datetime.date(2020, 5, 30)
+        date4 = datetime.date(2020, 5, 30)
+        expected = 0
+        self.assertEqual(expected, task.datediff(date3, date4))
+        # test3
+        date5 = datetime.date(1200, 7, 21)
+        date6 = datetime.date(2020, 5, 30)
+        expected = 299447
+        self.assertEqual(expected, task.datediff(date5, date6))
 
 if __name__ == '__main__':
     unittest.main()
